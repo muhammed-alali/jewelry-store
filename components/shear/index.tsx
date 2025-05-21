@@ -1,4 +1,5 @@
 "use client";
+
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -6,7 +7,16 @@ import {
   TwitterShareButton,
   WhatsappIcon,
   WhatsappShareButton,
-} from "next-share";
+} from "react-share";
+
+// import {
+//   FacebookIcon,
+//   FacebookShareButton,
+//   TwitterIcon,
+//   TwitterShareButton,
+//   WhatsappIcon,
+//   WhatsappShareButton,
+// } from "next-share";
 
 export default function Shear({
   title,
@@ -24,7 +34,6 @@ export default function Shear({
         <FacebookShareButton
           title={title}
           url={`${apiUrl}/${subdirectory}${slug ? `/${slug}` : ""}`}
-          blankTarget={true}
         >
           <FacebookIcon size={32} round />
         </FacebookShareButton>
@@ -32,7 +41,6 @@ export default function Shear({
         <TwitterShareButton
           title={title}
           url={`${apiUrl}/${subdirectory}${slug ? `/${slug}` : ""}`}
-          blankTarget={true}
         >
           <TwitterIcon size={32} round />
         </TwitterShareButton>
@@ -40,7 +48,6 @@ export default function Shear({
         <WhatsappShareButton
           title={title}
           url={`${apiUrl}/${subdirectory}${slug ? `/${slug}` : ""}`}
-          blankTarget={true}
         >
           <WhatsappIcon size={32} round />
         </WhatsappShareButton>
