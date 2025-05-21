@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/******** FloatingWhatsApp **********/
+.styles-module_buttonSend__kXjja {
+  transform: rotate(-180deg);
+}
+/******************/
+
+/************ best seller *************/
+#bestseller {
+  .swiper-button-prev:after {
+    font-size: 30px !important;
+  }
+  .swiper-button-next:after {
+    font-size: 30px !important;
+  }
+}
+
+/*********************************/
+
+/************ navbar li efect ******************/
+.navLi {
+  text-decoration: none;
+  position: relative;
+}
+
+.navLi::before,
+.navLi::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0 solid transparent;
+  width: 0;
+  height: 0;
+  transition: all 0.3s ease;
+}
+
+.navLi::after {
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.navLi::before {
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+/* ← التحويم مباشرة على .navLi */
+.navLi:hover::before,
+.navLi:hover::after {
+  width: 10px;
+  height: 10px;
+  border-color: #a6a6a6;
+}
+
+/*****************************/
+
+/************** home categories hover efect  ***************/
+.categoryEfect {
+  text-decoration: none;
+  position: relative;
+}
+
+.categoryEfect::before,
+.categoryEfect::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0 solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.5s ease;
+}
+
+.categoryEfect::after {
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.categoryEfect::before {
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.group:hover .categoryEfect::before,
+.group:hover .categoryEfect::after {
+  width: 100%;
+  height: 100%;
+  border-color: #febb5e;
+}
+
+#kategorisİd {
+  .swiper-button-next::after {
+    color: #febb5e;
+    font-size: 20px;
+  }
+  .swiper-button-prev::after {
+    color: #febb5e;
+    font-size: 20px;
+  }
+}
+
+/*****************************/
+
+/************ product efect  *****************/
+
+.productEfect {
+  text-decoration: none;
+  position: relative;
+}
+
+.productEfect::before,
+.productEfect::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0 solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.5s ease;
+}
+
+.productEfect::after {
+  top: 0;
+  left: 0;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+
+.productEfect::before {
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.group:hover .productEfect::before,
+.group:hover .productEfect::after {
+  width: 100%;
+  height: 100%;
+  border-color: #febb5e;
+}
+
+/*****************************/
+
+.tab-button {
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #1563df; /* Tailwind Blue (bg-blue-500) */
+  color: white;
+}
+
+.tab-button[data-state="active"] {
+  background-color: #1563df; /* Tailwind Blue (bg-blue-500) */
+  color: white !important;
+}
+
+/********** about rotateBorder ***********/
+
+.rotateBorder:hover {
+  transform: rotateY(180deg);
+}
+
+.rotateBorder::after {
+  animation-name: Rotate;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.animationTopBottom {
+  animation-name: topToBottom;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes topToBottom {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/*****************************/
+body {
+  position: relative;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.css-position {
+  background-position: 0px 28%;
+}
+
+.css-border {
+  padding-left: calc(28px + 11px);
+}
+
+.op {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/******* banner swiper  ********/
+#heroİd {
+  .swiper-button-next::after {
+    color: white;
+  }
+  .swiper-button-prev::after {
+    color: white;
+  }
+}
+/**************/
+
+@media (max-width: 500px) {
+  .swiper-button-next::after {
+    font-size: 30px !important;
+  }
+  .swiper-button-prev::after {
+    font-size: 30px !important;
+  }
+}
