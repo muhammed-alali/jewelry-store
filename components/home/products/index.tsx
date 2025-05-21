@@ -50,11 +50,8 @@ export default function HomeProducts() {
                 <TabPanel key={slug} value={slug}>
                   <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                     {array.map((item) => (
-                      <div className="group">
-                        <div
-                          key={item.id}
-                          className="border border-[e0e0e0] productEfect group relative overflow-hidden w-fit "
-                        >
+                      <div className="group" key={item.id}>
+                        <div className="border border-[e0e0e0] productEfect group relative overflow-hidden w-fit ">
                           <div className="relative overflow-hidden">
                             <div className=" relative  w-[250px] h-[250px] p-2">
                               <img
